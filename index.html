@@ -244,6 +244,15 @@ details p{color:var(--mut);padding-bottom:26px;max-width:62ch;font-size:17.5px}
 footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--mut);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 footer .logo b{color:var(--tx)}
+footer .legal{display:flex;flex-wrap:wrap;gap:8px 22px}
+footer .legal a{color:var(--mut);transition:.15s}
+footer .legal a:hover{color:var(--y)}
+footer .fine{margin-top:22px}
+.anpc{display:inline-flex;align-items:center;gap:12px;background:#fff;color:#0a0a0a;padding:8px 14px;min-width:250px;min-height:50px;border-radius:4px;line-height:1.15}
+.anpc b{font-family:var(--disp);font-weight:400;font-size:22px;letter-spacing:.02em;color:#0b3d91}
+.anpc span{font-family:var(--cond);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.form .legal-note{font-size:14px;color:var(--mut);margin:0}
+.form .legal-note a{color:var(--y)}
 
 .mbar{display:none}
 
@@ -498,6 +507,7 @@ footer .logo b{color:var(--tx)}
         <div class="two"><label>Nume<input name="nume" required autocomplete="name"></label><label>Telefon<input name="tel" type="tel" required autocomplete="tel"></label></div>
         <label>Mesaj (opțional)<textarea name="msg" rows="3" placeholder="ex. merg la sală de 2 ori pe săptămână..."></textarea></label>
         <button class="btn btn-y" type="submit">Trimite pe WhatsApp →</button>
+        <p class="legal-note">Datele nu sunt salvate pe site, ci doar trimise de tine prin WhatsApp. Detalii în <a href="politica-confidentialitate.html">Politica de confidențialitate</a>.</p>
       </form>
     </div>
   </div>
@@ -507,6 +517,15 @@ footer .logo b{color:var(--tx)}
 <footer>
   <div class="wrap">
     <a class="logo" href="#top"><i>AL</i><span><b>Anghel Laurențiu</b><small>Personal Trainer</small></span></a>
+    <nav class="legal" aria-label="Informații legale">
+      <a href="termeni-si-conditii.html">Termeni și condiții</a>
+      <a href="politica-confidentialitate.html">Confidențialitate</a>
+      <a href="politica-cookies.html">Cookie-uri</a>
+      <a href="https://anpc.ro/" target="_blank" rel="noopener">ANPC</a>
+    </nav>
+    <a class="anpc" href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener"><b>ANPC</b><span>Soluționarea alternativă<br>a litigiilor</span></a>
+  </div>
+  <div class="wrap fine">
     <span>© <span id="y"></span> Anghel Laurențiu · Antrenor personal Craiova · Stay Fit Gym</span>
   </div>
 </footer>
@@ -584,5 +603,6 @@ footer .logo b{color:var(--tx)}
   bf.addEventListener('submit',function(e){e.preventDefault()});
 })();
 </script>
+<script src="cookies.js"></script>
 </body>
 </html>
